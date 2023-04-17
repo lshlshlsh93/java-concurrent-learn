@@ -1,7 +1,5 @@
 package concurrent.part02.chapter02.volatile_;
 
-import java.util.concurrent.locks.Lock;
-import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * @Author lishaohui
@@ -11,8 +9,7 @@ public class VolatileWithCacheDemo {
 
     private static volatile int INITIAL_VALUE = 0;
 
-    private static final int MAX_LIMIT = 5;
-
+    private static final int MAX_LIMIT = 50;
 
     public static void main(String[] args) {
 
