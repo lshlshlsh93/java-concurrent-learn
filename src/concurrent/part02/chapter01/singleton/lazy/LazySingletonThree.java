@@ -20,7 +20,7 @@ public class LazySingletonThree {
                 }
             }
         }
-        return instance;
+        return LazySingletonThree.instance;
     }
 
 }

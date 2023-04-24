@@ -23,3 +23,36 @@ public class SingleDoubleCheck {
         return instance;
     }
 }
+
+class SingleDoubleCheckWithVolatile {
+    private static volatile SingleDoubleCheckWithVolatile instance = null;
+
+    private SingleDoubleCheckWithVolatile() {
+    }
+
+    public static SingleDoubleCheckWithVolatile getInstance() {
+        if (null == instance) {
+            synchronized (SingleDoubleCheckWithVolatile.class) {
+                if (null == instance) {
+                    instance = new SingleDoubleCheckWithVolatile();
+                }
+            }
+        }
+        return instance;
+    }
+}
+
+
+class SingletonWithHolder {
+
+    static class ContextHolder {
+        private static final SingletonWithHolder instance = new SingletonWithHolder();
+    }
+
+    public static SingletonWithHolder getSingletonWithHolder() {
+        return ContextHolder.instance;
+    }
+
+}
+
+

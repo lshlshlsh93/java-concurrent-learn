@@ -138,4 +138,20 @@ synchronized 关键字和 volatile 关键字是两个互补的存在，而不是
        ` volatile boolean flag = true; while(flag){ // } void close(){ flag = false; }`
     2. 屏障前后的一致性
 
+---
+
+13. 不可变对象
+    1. 不可变对象一定是线程安全的，里面的任何属性或者引用类型的属性都不能被修改
+       <br/>
+    2. 可变对象不一定是不安全的
+       <br/>
+    3. 例如：servlet类不是线程安全的。struct 1.x中Action不是线程安全的；struct 2.x中Action是线程安全的
+    4. StringBuffer内部大量加锁因此是一个可变的线程安全的类；StringBuilder是一个可变的线程不安全的类。
+
+---
+
+14. 多线程Future设计模式
+    1. Future->代表的是未来的一个凭据
+    2. FutureTask->将调用逻辑进行了隔离
+    3. FutureService->桥接Future和FutureTask
     
