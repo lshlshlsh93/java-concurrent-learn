@@ -10,7 +10,6 @@ public class SelfDesignCountDown {
 
     private int counter;
 
-
     public SelfDesignCountDown(int total) {
         this.total = total;
     }

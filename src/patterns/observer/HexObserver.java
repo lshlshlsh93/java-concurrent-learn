@@ -15,7 +15,8 @@ public class HexObserver extends Observer {
     @Override
     public void update() {
         Optional
-                .of(this.getClass().getSimpleName() + " -->  Hex String: " + Integer.toHexString(subject.getState()).toUpperCase())
+                .of(this.getClass().getSimpleName() + " -->  Hex String: "
+                        + Integer.toHexString(subject.getState()).toUpperCase())
                 .ifPresent(System.out::println);
     }
 }

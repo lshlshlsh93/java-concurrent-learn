@@ -25,4 +25,5 @@ public class Context {
     public void setCardId(String cardId) {
         this.cardId = cardId;
     }
+
 }

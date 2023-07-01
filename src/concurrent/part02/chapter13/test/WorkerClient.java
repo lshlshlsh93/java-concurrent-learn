@@ -1,4 +1,7 @@
-package concurrent.part02.chapter13;
+package concurrent.part02.chapter13.test;
+
+import concurrent.part02.chapter13.worker_thread_design_pattern.Channel;
+import concurrent.part02.chapter13.worker_thread_design_pattern.Transport;
 
 /**
  * @Author lishaohui

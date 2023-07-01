@@ -8,19 +8,20 @@ import java.util.Map;
  * @Date 2023/4/24 1:28
  */
 public class ThreadLocalSimulator<T> {
-    private final Map<Thread, T> STORAGE = new HashMap<>();
+
+    private final Map<Thread, T> THREAD_STORAGE_MAP = new HashMap<>();
 
     public void set(T t) {
         synchronized (this) {
             Thread key = Thread.currentThread();
-            STORAGE.put(key, t);
+            THREAD_STORAGE_MAP.put(key, t);
         }
     }
 
     public T get() {
         synchronized (this) {
             Thread key = Thread.currentThread();
-            T val = STORAGE.get(key);
+            T val = THREAD_STORAGE_MAP.get(key);
             if (val == null) {
                 return initialValue();
             }

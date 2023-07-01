@@ -1,4 +1,4 @@
-package concurrent.part02.chapter09;
+package concurrent.part02.chapter09.producer_consumer_design_pattern;
 
 import java.util.Optional;
 import java.util.Random;
@@ -10,6 +10,8 @@ import java.util.concurrent.atomic.AtomicInteger;
  */
 public class Producer extends Thread {
 
+    private static final String PRODUCER_NAME = "PRODUCER-";
+
     private final MessageQueue messageQueue;
 
     private static final Random RANDOM = new Random(System.currentTimeMillis());
@@ -17,7 +19,7 @@ public class Producer extends Thread {
     private static final AtomicInteger counter = new AtomicInteger(0);
 
     public Producer(MessageQueue messageQueue, int seq) {
-        super("PRODUCER" + seq);
+        super(PRODUCER_NAME + seq);
         this.messageQueue = messageQueue;
     }
 

@@ -1,4 +1,8 @@
-package concurrent.part02.chapter09;
+package concurrent.part02.chapter09.test;
+
+import concurrent.part02.chapter09.producer_consumer_design_pattern.Consumer;
+import concurrent.part02.chapter09.producer_consumer_design_pattern.MessageQueue;
+import concurrent.part02.chapter09.producer_consumer_design_pattern.Producer;
 
 /**
  * @Author lishaohui
@@ -7,7 +11,6 @@ package concurrent.part02.chapter09;
 public class ConsumerProducerClient {
 
     public static void main(String[] args) {
-
 
         final MessageQueue messageQueue = new MessageQueue();
 

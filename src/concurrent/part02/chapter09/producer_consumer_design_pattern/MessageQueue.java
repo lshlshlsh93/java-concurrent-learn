@@ -1,4 +1,4 @@
-package concurrent.part02.chapter09;
+package concurrent.part02.chapter09.producer_consumer_design_pattern;
 
 import java.util.LinkedList;
 
@@ -33,7 +33,7 @@ public class MessageQueue {
         }
     }
 
-    public Message poll() throws InterruptedException {
+    public Message take() throws InterruptedException {
         synchronized (messageQueue) {
             while (messageQueue.isEmpty()) {
                 messageQueue.wait();

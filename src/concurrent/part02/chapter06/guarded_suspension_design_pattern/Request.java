@@ -11,7 +11,9 @@ public class Request {
     public Request(String value) {
         this.value = value;
     }
+
     public String getValue() {
         return value;
     }
+
 }

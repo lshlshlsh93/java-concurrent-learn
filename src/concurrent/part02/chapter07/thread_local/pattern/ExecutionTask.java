@@ -12,7 +12,6 @@ public class ExecutionTask implements Runnable {
 
     @Override
     public void run() {
-
         queryFromDatabaseAction.execute();
         // 模拟日志记录
         System.out.println("The name query successful");

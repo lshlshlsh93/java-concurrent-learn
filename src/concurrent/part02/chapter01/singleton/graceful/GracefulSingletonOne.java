@@ -8,7 +8,7 @@ public class GracefulSingletonOne {
 
     // 使用volatile关键字解决可能出现空指针问题
     // volatile关键字可以保证可见性和（禁止重排序）有序性，不保证原子性
-    private static volatile GracefulSingletonOne instance;
+    private static volatile GracefulSingletonOne instance = null;
 
     private GracefulSingletonOne() {
     }

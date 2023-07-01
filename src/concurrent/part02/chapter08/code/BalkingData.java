@@ -16,7 +16,6 @@ public class BalkingData {
 
     private boolean changed;
 
-
     public BalkingData(String filename, String content) {
         this.filename = filename;
         this.content = content;

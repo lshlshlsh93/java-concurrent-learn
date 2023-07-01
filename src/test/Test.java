@@ -20,6 +20,7 @@ public class Test {
         char ch = 'l'; // 2B
         float f = 0.0f; // 4B
         double d = 0.0d; // 8B
+        
 
 
 //        IntStream.rangeClosed(1,100).forEach(System.out::println);

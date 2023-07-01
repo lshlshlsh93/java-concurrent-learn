@@ -1,4 +1,4 @@
-package concurrent.part02.chapter09;
+package concurrent.part02.chapter09.producer_consumer_design_pattern;
 
 /**
  * @Author lishaohui
@@ -6,7 +6,7 @@ package concurrent.part02.chapter09;
  */
 public class Message {
 
-    private String data;
+    private final String data;
 
     public Message(String data) {
         this.data = data;
@@ -15,4 +15,5 @@ public class Message {
     public String getData() {
         return data;
     }
+
 }

@@ -6,10 +6,8 @@ package concurrent.part02.chapter07.thread_local.pattern;
  */
 public final class ActionContext {
 
-    private static final ThreadLocal<Context> CONTEXT_THREAD_LOCAL =
-            ThreadLocal.withInitial(Context::new);
+    private static final ThreadLocal<Context> CONTEXT_THREAD_LOCAL = ThreadLocal.withInitial(Context::new);
 
-    // 单例模式
     private static class ContextHolder {
         private final static ActionContext actionContext = new ActionContext();
     }
